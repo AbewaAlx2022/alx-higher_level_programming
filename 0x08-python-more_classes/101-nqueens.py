@@ -16,7 +16,12 @@ import sys
 
 
 def init_board(n):
-    """Initialize an `n`x`n` sized chessboard with 0's."""
+    """Initialize an `n`x`n` sized chessboard with 0's.
+    Args:
+        n: integer ro initialize
+
+    Return: list of chessboard
+    """
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
@@ -24,14 +29,24 @@ def init_board(n):
 
 
 def board_deepcopy(board):
-    """Return a deepcopy of a chessboard."""
+    """Return a deepcopy of a chessboard.
+    Args:
+        board: chessboard to make copy from.
+
+    Return: a deepcopy of a chessboard.
+    """
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
     return (board)
 
 
 def get_solution(board):
-    """Return the list of lists representation of a solved chessboard."""
+    """Creates the list of lists representation of a solved chessboard.
+    Args:
+        board: list of chessboard
+
+    Return: list of lists.
+    """
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
