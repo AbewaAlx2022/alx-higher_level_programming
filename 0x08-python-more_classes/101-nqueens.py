@@ -43,9 +43,9 @@ def get_solution(board):
 
 def xout(board, row, col):
     """X out spots on a chessboard.
-    All spots where non-attacking queens can no
+All spots where non-attacking queens can no
     longer be played are X-ed out.
-    Args:
+Args:
         board (list): The current working chessboard.
         row (int): The row where a queen was last played.
         col (int): The column where a queen was last played.
