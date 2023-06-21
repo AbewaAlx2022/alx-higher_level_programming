@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+'''script lists all states from the db'''
+
+import MySQLdb
+import sys
+
 def list_all():
     '''list all states in db'''
     username = sys.argv[1]
